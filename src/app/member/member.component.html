@@ -1,0 +1,163 @@
+      <section class="page-contents">
+        <section id="main-area">
+          <section class="section">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-3"><img src="assets/img/people/09.jpg" alt="">
+                  <div class="sp-blank-20"></div>
+                  <h2>{{ member.firstName + ' ' +member.lastName }}</h2>
+                  <ul class="list-unstyled">
+                    <li><strong>{{ member.grade }}</strong></li>
+                    <li><span>E-mail : </span> {{ member.email }}</li>
+                    <li><span>Homepage : </span> {{ member.homepage }}</li>
+                    <li><span>Phone : </span> {{ member.phone }}</li>
+                  </ul><a href="#" class="ol-iconic-link m-top-30 m-bottom-50"><i class="oli oli-download"></i>Download CV</a></div>
+                <div
+                        class="col-sm-9">
+                  <p></p>
+                  <p></p>
+                  <div class="sp-blank-50"></div>
+                  <h3>Research Interests</h3>
+                  <ol class="with-shaded-label ol-greek">
+                    <li>{{ member.researchFileds }}</li>
+                  </ol>
+                  <div class="sp-blank-80"></div>
+                  <h3>Educations</h3>
+                  <p class="font-cf">
+                    TEXT HERE !!!
+                  </p>
+                  <div class="ol-timeline">
+                    <div class="tl-item pub-item with-icon"><span class="item-section">2015</span>
+                      <div class="elem-wrapper"><i class="oli oli-bookmark"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">Doctor of Philosophy</h3>
+                        <div class="description">
+                          <p>in Mechanical Engineering<br>Stanford University</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tl-item pub-item with-icon"><span class="item-section">2012</span>
+                      <div class="elem-wrapper"><i class="oli oli-bookmark"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">Master of Science</h3>
+                        <div class="description">
+                          <p>in Mechanical Engineering<br>Stanford University</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tl-item pub-item with-icon"><span class="item-section">2008</span>
+                      <div class="elem-wrapper"><i class="oli oli-bookmark"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">Bachelor of Science</h3>
+                        <div class="description">
+                          <p>in Mechanical Engineering<br>Stanford University</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sp-blank-80"></div>
+                  <h3>Positions</h3>
+                  <p></p>
+                  <div class="ol-timeline">
+                    <div class="tl-item pub-item with-icon"><span class="item-section">2015</span>
+                      <div class="elem-wrapper"><i class="oli oli-desk_lamp"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">General Atlantic Professor</h3>
+                        <div class="description">
+                          <p>in Mechanical Engineering<br>Stanford University</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tl-item pub-item with-icon"><span class="item-section">2012</span>
+                      <div class="elem-wrapper"><i class="oli oli-desk_lamp"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">Assistance Professor</h3>
+                        <div class="description">
+                          <p>in Mechanical Engineering<br>Stanford University</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tl-item pub-item with-icon"><span class="item-section">2005</span>
+                      <div class="elem-wrapper"><i class="oli oli-desk_lamp"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">Baghale Seller</h3>
+                        <div class="description">
+                          <p>in Daneshjo Blvd.<br>Shiraz Hafezie</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sp-blank-80"></div>
+                  <h3>Selected Publications</h3>
+                  <p class="font-cf m-bottom-50">Phasellus lectus sem, egestas eget sollicitudin ut, lobortis ac nulla.
+                    Phasellus lectus sem, egestas eget solPhasellus lectus sem, egestas
+                    eget sollicitudin ut, lobortis ac nulla. Phasellus lectus sem,
+                    egestas eget sollicitudin ut.licitudin ut. Phasellus lectus sem,
+                    egestas eget sollicitudin ut, lobortis ac nulla. Phasellus lectus
+                    sem, egestas eget sollicitudin ut.</p>
+                  <div class="wrapper">
+                    <div *ngFor="let article of member.articles" class="pub-item with-icon">
+                      <div class="elem-wrapper"><i class="oli oli-bookmark"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">{{ article.title}}</h3>
+                        <div class="description">
+                          <div class="citation">{{ article.description + ' ,' }} {{ article.date | date:'y'}}<br>
+                            <span *ngFor="let author of article.authors">{{author + ' ' }}</span>
+                          </div>
+                          <a *ngIf="article.url" [href]="article.url" class="link-with-icon"><i class="fa fa-external-link"></i>Publisher's
+                            website</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sp-blank-80"></div>
+                  <h3>Honors &amp; Awards</h3>
+                  <p class="font-cf">Mauris sit amet pellentesque ipsum, eget mollis leo. Vestibulum ante ipsum primis
+                    in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ac ultrices
+                    augue, molestie cursus est.</p>
+                  <div class="ol-timeline">
+                    <div class="tl-item pub-item with-icon"><span class="item-section">2015</span>
+                      <div class="elem-wrapper"><i class="oli oli-university"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">Nobel Prize</h3>
+                        <div class="description">
+                          <p></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tl-item pub-item with-icon"><span class="item-section">2000</span>
+                      <div class="elem-wrapper"><i class="oli oli-literature"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">Nuffield Foundation New Lecturer Award</h3>
+                        <div class="description">
+                          <p></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tl-item pub-item with-icon"><span class="item-section">1999</span>
+                      <div class="elem-wrapper"><i class="oli oli-literature"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">Invaders And Guardians Award</h3>
+                        <div class="description">
+                          <p></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tl-item pub-item with-icon"><span class="item-section">1996</span>
+                      <div class="elem-wrapper"><i class="oli oli-university"></i></div>
+                      <div class="content-wrapper">
+                        <h3 class="title">Influence Of The Land Award</h3>
+                        <div class="description">
+                          <p>us sem, egestas eget sollicitudin
+                            ut.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <div class="clearfix"></div>
+      </section>
